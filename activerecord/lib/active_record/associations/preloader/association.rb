@@ -12,6 +12,7 @@ module ActiveRecord
           def initialize(scope, association_key_name)
             @scope = scope
             @association_key_name = association_key_name
+            puts "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
           end
 
           def eql?(other)
