@@ -250,10 +250,10 @@ module ActiveRecord
             if reflection.collection?
               not_persisted_records = association.target.reject(&:persisted?)
               association.target = records + not_persisted_records
-              Rails.logger.debug "Associating #{records.inspect} to #{owner.inspect}"
+              Rails.logger.warn "Associating #{records.inspect} to #{owner.inspect}"
             else
               association.target = records.first
-              Rails.logger.debug "Associating #{records.first.inspect} to #{owner.inspect}"
+              Rails.logger.warn "Associating #{records.first.inspect} to #{owner.inspect}"
             end
           end
 
